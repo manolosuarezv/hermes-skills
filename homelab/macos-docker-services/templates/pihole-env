@@ -1,0 +1,4 @@
+# Pi-hole environment — copy to ~/pihole/.env
+# Generate a fresh password with: openssl rand -base64 12 | tr -dc 'A-Za-z0-9' | head -c16
+PIHOLE_PASSWORD=CHANGE_ME
+TZ=America/Bogota

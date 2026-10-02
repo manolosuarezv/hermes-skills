@@ -1,0 +1,24 @@
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "8080:80/tcp"          # 8080 on host -> 80 container (avoid macOS :80 clash)
+    environment:
+      TZ: '${TZ}'
+      # Pi-hole v6 renamed WEBPASSWORD -> FTLCONF_webserver_api_password
+      FTLCONF_webserver_api_password: '${PIHOLE_PASSWORD}'
+      # Accept queries from LAN + Tailscale (100.x); otherwise TS queries refused
+      FTLCONF_dns_listeningMode: 'all'
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/admin/"]
+      timeout: 5s
+      retries: 5

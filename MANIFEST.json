@@ -1,0 +1,504 @@
+{
+  "generated": "2026-10-02",
+  "count": 71,
+  "note": "regenerar con python3 /tmp/gen_manifest.py",
+  "skills": [
+    {
+      "name": "autonomous-ai-agents/agent-interconnectivity",
+      "path": "autonomous-ai-agents/agent-interconnectivity",
+      "size": 4296,
+      "mtime": "2026-09-19T20:44:16.352277",
+      "desc": "Use when connecting agents across hosts. Choose securely."
+    },
+    {
+      "name": "autonomous-ai-agents/hermes-agent",
+      "path": "autonomous-ai-agents/hermes-agent",
+      "size": 13183,
+      "mtime": "2026-09-02T01:51:52.897297",
+      "desc": "Use, configure, theme, extend, and orchestrate Hermes Agent."
+    },
+    {
+      "name": "creative/ascii-art",
+      "path": "creative/ascii-art",
+      "size": 10556,
+      "mtime": "2026-07-27T18:35:36.051518",
+      "desc": "ASCII art: pyfiglet, cowsay, boxes, image-to-ascii."
+    },
+    {
+      "name": "creative/comfyui",
+      "path": "creative/comfyui",
+      "size": 24117,
+      "mtime": "2026-07-27T18:35:36.055993",
+      "desc": "Generate images, video, and audio via diffusion workflows."
+    },
+    {
+      "name": "creative/excalidraw",
+      "path": "creative/excalidraw",
+      "size": 7297,
+      "mtime": "2026-07-27T18:35:36.063709",
+      "desc": "Hand-drawn Excalidraw JSON diagrams (arch, flow, seq)."
+    },
+    {
+      "name": "creative/pretext",
+      "path": "creative/pretext",
+      "size": 13962,
+      "mtime": "2026-07-27T18:35:36.070582",
+      "desc": "Build creative browser demos with DOM-free text layout."
+    },
+    {
+      "name": "creative/sketch",
+      "path": "creative/sketch",
+      "size": 9788,
+      "mtime": "2026-07-27T18:35:36.070954",
+      "desc": "Throwaway HTML mockups: 2-3 design variants to compare."
+    },
+    {
+      "name": "creative/touchdesigner-mcp",
+      "path": "creative/touchdesigner-mcp",
+      "size": 15269,
+      "mtime": "2026-07-27T18:35:36.071150",
+      "desc": "Control TouchDesigner via twozero MCP."
+    },
+    {
+      "name": "devops/hermes-backup-and-update",
+      "path": "devops/hermes-backup-and-update",
+      "size": 4767,
+      "mtime": "2026-09-11T05:41:10.973850",
+      "desc": "Use when backing up Hermes before an update."
+    },
+    {
+      "name": "devops/hermes-credential-provisioning",
+      "path": "devops/hermes-credential-provisioning",
+      "size": 9753,
+      "mtime": "2026-08-24T09:51:08.929639",
+      "desc": "Provision tokens to Hermes agents via .env gateway restart"
+    },
+    {
+      "name": "devops/hermes-gateway-ops",
+      "path": "devops/hermes-gateway-ops",
+      "size": 4940,
+      "mtime": "2026-08-17T21:56:10.980290",
+      "desc": "Manage the Hermes gateway on a remote macOS host."
+    },
+    {
+      "name": "devops/hermes-runtime-config",
+      "path": "devops/hermes-runtime-config",
+      "size": 12821,
+      "mtime": "2026-09-16T21:22:24.927890",
+      "desc": "Switch Hermes model/provider/fallback via `hermes config`."
+    },
+    {
+      "name": "devops/llm-cost-control",
+      "path": "devops/llm-cost-control",
+      "size": 15051,
+      "mtime": "2026-09-08T08:25:42.416003",
+      "desc": "Control Hermes LLM API spend and paid provider cost."
+    },
+    {
+      "name": "devops/sdlc-review",
+      "path": "devops/sdlc-review",
+      "size": 9073,
+      "mtime": "2026-09-02T01:51:52.899845",
+      "desc": "Review Kanban handoffs and route verified outcomes."
+    },
+    {
+      "name": "email/agentmail-mcp",
+      "path": "email/agentmail-mcp",
+      "size": 6276,
+      "mtime": "2026-09-08T22:07:25.796022",
+      "desc": "AgentMail MCP email: send requires inbox UUID, not address."
+    },
+    {
+      "name": "email/bank-email-monitoring",
+      "path": "email/bank-email-monitoring",
+      "size": 4662,
+      "mtime": "2026-09-16T17:29:00.274824",
+      "desc": "Use when monitoring bank email alerts."
+    },
+    {
+      "name": "email/email-inbox-triage",
+      "path": "email/email-inbox-triage",
+      "size": 4057,
+      "mtime": "2026-09-02T01:51:52.900053",
+      "desc": "Triage an inbox: prioritize threads, draft replies safely."
+    },
+    {
+      "name": "email/himalaya",
+      "path": "email/himalaya",
+      "size": 7272,
+      "mtime": "2026-07-27T18:35:36.073654",
+      "desc": "Himalaya CLI: IMAP/SMTP email from terminal."
+    },
+    {
+      "name": "file-consolidation",
+      "path": "file-consolidation",
+      "size": 5318,
+      "mtime": "2026-09-26T12:08:14.533596",
+      "desc": "Unificar varias copias de un archivo (local + Drive) en una versión canónica — comparar, snapshot, script, verificar, su"
+    },
+    {
+      "name": "github/github-auth",
+      "path": "github/github-auth",
+      "size": 7618,
+      "mtime": "2026-07-27T18:35:36.074043",
+      "desc": "GitHub auth setup: HTTPS tokens, SSH keys, gh CLI login."
+    },
+    {
+      "name": "github/github-code-review",
+      "path": "github/github-code-review",
+      "size": 13620,
+      "mtime": "2026-07-27T18:35:36.074285",
+      "desc": "Review PRs: diffs, inline comments via gh or REST."
+    },
+    {
+      "name": "github/github-issues",
+      "path": "github/github-issues",
+      "size": 9320,
+      "mtime": "2026-07-27T18:35:36.074470",
+      "desc": "Create, triage, label, assign GitHub issues via gh or REST."
+    },
+    {
+      "name": "github/github-pr-workflow",
+      "path": "github/github-pr-workflow",
+      "size": 10040,
+      "mtime": "2026-07-27T18:35:36.074717",
+      "desc": "GitHub PR lifecycle: branch, commit, open, CI, merge."
+    },
+    {
+      "name": "github/github-repo-management",
+      "path": "github/github-repo-management",
+      "size": 13738,
+      "mtime": "2026-07-27T18:35:36.075111",
+      "desc": "Clone/create/fork repos; manage remotes, releases."
+    },
+    {
+      "name": "google-workspace",
+      "path": "google-workspace",
+      "size": 5274,
+      "mtime": "2026-09-13T16:06:25.785383",
+      "desc": "Connect Hermes to Google Workspace (Gmail, Calendar, Drive, Sheets, Docs, Contacts) via OAuth. Setup, credential recover"
+    },
+    {
+      "name": "homelab-wake-on-lan",
+      "path": "homelab-wake-on-lan",
+      "size": 6274,
+      "mtime": "2026-09-13T16:07:06.264657",
+      "desc": "Power on/off homelab servers (qbex/server01, etc.) via Wake-on-LAN magic packets and SSH. Verify server state, send WOL "
+    },
+    {
+      "name": "homelab/homelab-filesystem-organization",
+      "path": "homelab/homelab-filesystem-organization",
+      "size": 3109,
+      "mtime": "2026-09-11T05:52:48.268731",
+      "desc": "Use when reorganizing folders on a homelab server."
+    },
+    {
+      "name": "homelab/homelab-server-control",
+      "path": "homelab/homelab-server-control",
+      "size": 7090,
+      "mtime": "2026-09-11T06:34:09.204117",
+      "desc": "Power off/on headless homelab servers via expect ssh."
+    },
+    {
+      "name": "homelab/homelab-wake-on-lan",
+      "path": "homelab/homelab-wake-on-lan",
+      "size": 14293,
+      "mtime": "2026-08-18T11:42:11.274727",
+      "desc": "Wake a headless homelab server remotely via Wake-on-LAN."
+    },
+    {
+      "name": "homelab/macos-bash-porting",
+      "path": "homelab/macos-bash-porting",
+      "size": 3695,
+      "mtime": "2026-08-22T10:52:49.040127",
+      "desc": "Port Linux bash scripts to the macOS Mac mini gateway."
+    },
+    {
+      "name": "homelab/macos-docker-services",
+      "path": "homelab/macos-docker-services",
+      "size": 14827,
+      "mtime": "2026-10-01T21:45:56.432228",
+      "desc": "Self-host Docker on Mac Mini via OrbStack + Tailscale."
+    },
+    {
+      "name": "homelab/qbex-contabilidad-backup",
+      "path": "homelab/qbex-contabilidad-backup",
+      "size": 14436,
+      "mtime": "2026-09-13T21:19:34.549557",
+      "desc": "Run or fix the daily qbex contabilidad backup to RAID."
+    },
+    {
+      "name": "homelab/remote-mac-management",
+      "path": "homelab/remote-mac-management",
+      "size": 5144,
+      "mtime": "2026-09-16T19:30:12.183954",
+      "desc": "Manage a headless Mac Mini remotely via Tailscale."
+    },
+    {
+      "name": "messaging/hermes-send-outbound",
+      "path": "messaging/hermes-send-outbound",
+      "size": 4721,
+      "mtime": "2026-08-22T11:13:40.865327",
+      "desc": "Hermes send --to scripting; positional form silently fails."
+    },
+    {
+      "name": "messaging/inbound-voice-messages",
+      "path": "messaging/inbound-voice-messages",
+      "size": 6779,
+      "mtime": "2026-07-27T21:41:34.420390",
+      "desc": "Transcribe voice notes from Hermes messaging channels."
+    },
+    {
+      "name": "messaging/whatsapp-setup",
+      "path": "messaging/whatsapp-setup",
+      "size": 11784,
+      "mtime": "2026-09-13T16:07:58.185440",
+      "desc": "Set up WhatsApp with Hermes: QR bridge or Meta Cloud."
+    },
+    {
+      "name": "mlops/evaluation",
+      "path": "mlops/evaluation/evaluating-llms-harness",
+      "size": 12204,
+      "mtime": "2026-07-27T18:35:36.076401",
+      "desc": "lm-eval-harness: benchmark LLMs (MMLU, GSM8K, etc.)."
+    },
+    {
+      "name": "mlops/evaluation",
+      "path": "mlops/evaluation/weights-and-biases",
+      "size": 12676,
+      "mtime": "2026-07-27T18:35:36.076799",
+      "desc": "W&B: log ML experiments, sweeps, model registry, dashboards."
+    },
+    {
+      "name": "mlops/huggingface-hub",
+      "path": "mlops/huggingface-hub",
+      "size": 3715,
+      "mtime": "2026-07-27T18:35:36.077120",
+      "desc": "HuggingFace hf CLI: search/download/upload models, datasets."
+    },
+    {
+      "name": "mlops/inference",
+      "path": "mlops/inference/serving-llms-vllm",
+      "size": 9335,
+      "mtime": "2026-07-27T18:35:36.077745",
+      "desc": "vLLM: high-throughput LLM serving, OpenAI API, quantization."
+    },
+    {
+      "name": "mlops/inference",
+      "path": "mlops/inference/llama-cpp",
+      "size": 8880,
+      "mtime": "2026-07-27T18:35:36.077272",
+      "desc": "llama.cpp local GGUF inference + HF Hub model discovery."
+    },
+    {
+      "name": "productivity/_archive",
+      "path": "productivity/_archive/contabilidad-suarez",
+      "size": 5814,
+      "mtime": "2026-08-17T23:34:57.141738",
+      "desc": "Registro contable Suárez/Renata por cualquier canal."
+    },
+    {
+      "name": "productivity/box",
+      "path": "productivity/box",
+      "size": 11697,
+      "mtime": "2026-09-02T01:51:52.900575",
+      "desc": "Box manages cloud files, sharing, search, and metadata."
+    },
+    {
+      "name": "productivity/chat-export-ledger",
+      "path": "productivity/chat-export-ledger",
+      "size": 3632,
+      "mtime": "2026-08-04T13:09:36.671715",
+      "desc": "WhatsApp export ZIP to formula-driven accounting Excel."
+    },
+    {
+      "name": "productivity/collective-wisdom-install",
+      "path": "productivity/collective-wisdom-install",
+      "size": 7210,
+      "mtime": "2026-09-11T05:32:21.077729",
+      "desc": "Browse, install, or share team skills with consent."
+    },
+    {
+      "name": "productivity/contabilidad-suarez-v2",
+      "path": "productivity/contabilidad-suarez-v2",
+      "size": 6236,
+      "mtime": "2026-09-19T07:50:54.168030",
+      "desc": "Use when evolving Suárez accounting. Audit first."
+    },
+    {
+      "name": "productivity/document-to-action-items",
+      "path": "productivity/document-to-action-items",
+      "size": 3910,
+      "mtime": "2026-09-02T01:51:52.901644",
+      "desc": "Extract cited obligations, deadlines, tasks from documents."
+    },
+    {
+      "name": "productivity/google-workspace",
+      "path": "productivity/google-workspace",
+      "size": 13411,
+      "mtime": "2026-07-27T18:35:36.083287",
+      "desc": "Gmail, Calendar, Drive, Docs, Sheets via gws CLI or Python."
+    },
+    {
+      "name": "productivity/ledger-accounting",
+      "path": "productivity/ledger-accounting",
+      "size": 20171,
+      "mtime": "2026-09-16T19:46:02.510885",
+      "desc": "xlsx ledger: entra/sale as stated; soporte is proof not move"
+    },
+    {
+      "name": "productivity/local-first-tooling",
+      "path": "productivity/local-first-tooling",
+      "size": 5519,
+      "mtime": "2026-08-14T21:41:03.445006",
+      "desc": "Pick/setup tools under a $0/local-first rule; local LLM agents for routine work, paid APIs only when authorized + spend-"
+    },
+    {
+      "name": "productivity/meeting-action-items",
+      "path": "productivity/meeting-action-items",
+      "size": 3808,
+      "mtime": "2026-09-02T01:51:52.904658",
+      "desc": "Turn meeting notes into cited decisions, owners, tickets."
+    },
+    {
+      "name": "productivity/nano-pdf",
+      "path": "productivity/nano-pdf",
+      "size": 1605,
+      "mtime": "2026-07-27T18:35:36.084024",
+      "desc": "Edit text in existing PDFs via natural-language prompts."
+    },
+    {
+      "name": "productivity/ocr-and-documents",
+      "path": "productivity/ocr-and-documents",
+      "size": 5383,
+      "mtime": "2026-07-27T18:35:36.084411",
+      "desc": "Extract text from PDFs/scans (pymupdf, marker-pdf)."
+    },
+    {
+      "name": "productivity/ocr-local-images",
+      "path": "productivity/ocr-local-images",
+      "size": 2561,
+      "mtime": "2026-08-24T07:50:41.581163",
+      "desc": "OCR local JPEG/PNG via tesseract when vision_analyze 404s."
+    },
+    {
+      "name": "productivity/product-price-monitor",
+      "path": "productivity/product-price-monitor",
+      "size": 4400,
+      "mtime": "2026-09-02T01:51:52.907820",
+      "desc": "Watch product, flight, or listing prices; alert on target."
+    },
+    {
+      "name": "productivity/safe-data-cleanup",
+      "path": "productivity/safe-data-cleanup",
+      "size": 2685,
+      "mtime": "2026-08-19T14:07:40.253681",
+      "desc": "Depurar datos sin borrar; archivar y preservar trazabilidad."
+    },
+    {
+      "name": "productivity/spreadsheet-html-server",
+      "path": "productivity/spreadsheet-html-server",
+      "size": 3393,
+      "mtime": "2026-09-08T19:35:13.329951",
+      "desc": "Use when serving Excel as searchable HTML."
+    },
+    {
+      "name": "productivity/suarez-contabilidad",
+      "path": "productivity/suarez-contabilidad",
+      "size": 70828,
+      "mtime": "2026-09-28T08:44:02.005740",
+      "desc": "Use when managing Suárez ledgers across channels. Follow the verified local/Git/Google Workspace pipeline."
+    },
+    {
+      "name": "productivity/weekly-review-planning",
+      "path": "productivity/weekly-review-planning",
+      "size": 3975,
+      "mtime": "2026-09-02T01:51:52.908001",
+      "desc": "Weekly reset: commitments, stalled work, next-week plan."
+    },
+    {
+      "name": "productivity/xlsx",
+      "path": "productivity/xlsx",
+      "size": 9655,
+      "mtime": "2026-09-02T01:51:52.908435",
+      "desc": "Create, read, edit Excel .xlsx workbooks and CSVs."
+    },
+    {
+      "name": "research/blogwatcher",
+      "path": "research/blogwatcher",
+      "size": 5111,
+      "mtime": "2026-07-27T18:35:36.090181",
+      "desc": "Monitor blogs and RSS/Atom feeds via blogwatcher-cli tool."
+    },
+    {
+      "name": "research/competitor-news-monitor",
+      "path": "research/competitor-news-monitor",
+      "size": 4619,
+      "mtime": "2026-09-11T05:32:21.077827",
+      "desc": "Watch named companies for material news; cited digests."
+    },
+    {
+      "name": "research/grounded-citations",
+      "path": "research/grounded-citations",
+      "size": 12652,
+      "mtime": "2026-09-11T05:32:21.077960",
+      "desc": "Ground answers and documents in cited, verifiable sources."
+    },
+    {
+      "name": "research/polymarket",
+      "path": "research/polymarket",
+      "size": 2985,
+      "mtime": "2026-07-27T18:35:36.090358",
+      "desc": "Query Polymarket: markets, prices, orderbooks, history."
+    },
+    {
+      "name": "research/research-paper-writing",
+      "path": "research/research-paper-writing",
+      "size": 103656,
+      "mtime": "2026-07-27T18:35:36.090756",
+      "desc": "Write ML papers for NeurIPS/ICML/ICLR: design→submit."
+    },
+    {
+      "name": "research/rss-feeds",
+      "path": "research/rss-feeds",
+      "size": 4557,
+      "mtime": "2026-09-07T18:44:14.115227",
+      "desc": "Read RSS, Atom, JSON feeds; discover feeds behind a page."
+    },
+    {
+      "name": "smart-home/openhue",
+      "path": "smart-home/openhue",
+      "size": 2843,
+      "mtime": "2026-07-27T18:35:36.096012",
+      "desc": "Control Philips Hue lights, scenes, rooms via OpenHue CLI."
+    },
+    {
+      "name": "social-media/reddit-reading",
+      "path": "social-media/reddit-reading",
+      "size": 6279,
+      "mtime": "2026-09-07T18:44:14.115410",
+      "desc": "Read Reddit: subreddits, search, threads, users. No browser."
+    },
+    {
+      "name": "software-development/github",
+      "path": "software-development/github",
+      "size": 2446,
+      "mtime": "2026-09-02T01:51:52.910927",
+      "desc": "GitHub via gh CLI: PRs, issues, reviews, repos, auth."
+    },
+    {
+      "name": "software-development/plan",
+      "path": "software-development/plan",
+      "size": 8903,
+      "mtime": "2026-07-27T18:35:36.096810",
+      "desc": "Write a markdown plan to .hermes/plans/; no execution."
+    },
+    {
+      "name": "web/blocked-page-recovery",
+      "path": "web/blocked-page-recovery",
+      "size": 5156,
+      "mtime": "2026-09-02T01:51:52.915078",
+      "desc": "Use when a fetch fails: 403/429, paywall, WAF, bot wall."
+    }
+  ]
+}

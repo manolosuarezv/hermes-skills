@@ -1,0 +1,27 @@
+#!/usr/bin/expect -f
+# Plantilla probada en producción (agosto 2026) — qbex/server01 Debian 13
+# Uso:
+#   1. Copiar a /tmp/qbex_off.exp
+#   2. Rellenar PASS abajo
+#   3. expect /tmp/qbex_off.exp
+#   4. rm -f /tmp/qbex_off.exp   ← SIEMPRE borrar después
+
+set timeout 30
+set ip   "192.168.1.69"
+set user "user01"
+set pass "PASSWORD_HERE"
+
+spawn ssh -o StrictHostKeyChecking=no -o BatchMode=no $user@$ip
+expect {
+    "password:" { send "$pass\r" }
+    "yes/no"    { send "yes\r"; exp_continue }
+}
+expect "$ "
+send "sudo -S systemctl poweroff -f\r"
+expect {
+    "password" { send "$pass\r" }
+    eof        {}
+}
+expect eof
+# Nota: "Connection reset by peer" / "Broken pipe" = ÉXITO (el host cortó red al apagarse)
+# Verificar apagado: ping -c 4 -t 3 <IP> → debe dar 100% loss (puede tardar 15-30 seg)

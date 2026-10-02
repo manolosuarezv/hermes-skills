@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.suarez.contabilidad.cierre</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/manuelsuarez/.hermes/contabilidad/venv/bin/python3</string>
+        <string>/Users/manuelsuarez/.hermes/contabilidad/scripts/cierre_diario.py</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/manuelsuarez/.hermes/contabilidad</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PYTHONPATH</key>
+        <string></string>
+        <key>PATH</key>
+        <string>/Users/manuelsuarez/.hermes/contabilidad/venv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>23</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/manuelsuarez/.hermes/contabilidad/logs/cierre_diario.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/manuelsuarez/.hermes/contabilidad/logs/cierre_diario.err.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+    <key>AbandonProcessGroup</key>
+    <true/>
+</dict>
+</plist>
