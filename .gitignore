@@ -1,0 +1,7 @@
+.usage.json
+.usage.json.lock
+.curator_*
+.archive/
+._*
+__pycache__/
+*.pyc
