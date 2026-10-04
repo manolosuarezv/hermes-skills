@@ -28,13 +28,15 @@ git clone --mirror https://github.com/$REPO.git /tmp/purge
 
 # 2. Reglas LITERALES (sin regex) en un archivo aparte.
 #    OJO: --replace-text NO interpreta regex. '\.' y '[a-z]' NO casan y pasan de largo.
+#    OJO 2: este archivo es PUBLICO. Ejemplos con valores reales = nueva filtracion.
+#    Usa siempre valores ficticios en la documentacion.
 printf '%s\n' \
   '300123456789==>NUMERO_WHATSAPP' \
   'GMAIL_PERSONAL==>GMAIL_PERSONAL' \
-  'agente@ejemplo.invalid==>hermenegildo-hermes@DOMINIO_MAILBOX' \
+  'agente@ejemplo.invalid==>agente@DOMINIO_MAILBOX' \
   'Mi-Mac.local==>HOSTNAME_MAC' \
   '1AbCdEfGhIjKlMnOpQrStUvWxYz01234==>ID_DRIVE_UNIFICADA' \
-  'USUARIO_GITHUB==>USUARIO_GITHUB' > /tmp/rules.txt
+  'usuario-github==>USUARIO_GITHUB' > /tmp/rules.txt
 
 # 3. Reescribir blobs de TODOS los refs
 $FILTER --force --replace-text /tmp/rules.txt --replace-refs delete-no-add
