@@ -11,8 +11,9 @@
 #   USB_LABEL     default TritonEs
 #   QBEX_HOST     default 192.168.1.69
 #   QBEX_USER     default user01
-#   QBEX_REMOTE   default /mnt/raid/backups/hermes
-#   GH_REPO       default <owner>/hermes-skills
+#   QBEX_REMOTE   default /mnt/raid/backups/hermes/ver
+#   QBEX_KEY      default ~/.ssh/id_ed25519_qbex
+#   GH_REPO       default USUARIO_GITHUB/hermes-skills
 
 set -uo pipefail
 
@@ -22,8 +23,9 @@ USB_MOUNT="${USB_MOUNT:-/Volumes/Tritones}"
 USB_LABEL="${USB_LABEL:-Tritones}"
 QBEX_HOST="${QBEX_HOST:-192.168.1.69}"
 QBEX_USER="${QBEX_USER:-user01}"
-QBEX_REMOTE="${QBEX_REMOTE:-/mnt/raid/backups/hermes}"
-GH_REPO="${GH_REPO:-}"
+QBEX_REMOTE="${QBEX_REMOTE:-/mnt/raid/backups/hermes/ver}"
+QBEX_KEY="${QBEX_KEY:-$HOME/.ssh/id_ed25519_qbex}"
+GH_REPO="${GH_REPO:-USUARIO_GITHUB/hermes-skills}"
 
 TS="$(date +%Y%m%d_%H%M%S)"
 STAGE="/tmp/skills-stage-$TS"
@@ -94,13 +96,13 @@ fi
 
 # ---------------------------------------------------------------- remoto (WOL -> rsync)
 if has remote; then
-  if ping -c1 -W2 "$QBEX_HOST" >/dev/null 2>&1; then
+  if ping -c1 -t2 "$QBEX_HOST" >/dev/null 2>&1; then
     note REMOTO "$QBEX_HOST responde"
-    ssh -o BatchMode=yes -o ConnectTimeout=8 "$QBEX_USER@$QBEX_HOST" \
+    ssh -i "$QBEX_KEY" -o BatchMode=yes -o ConnectTimeout=8 "$QBEX_USER@$QBEX_HOST" \
       "mkdir -p '$QBEX_REMOTE/skills/$TS'" >/dev/null 2>&1
-    if scp -o BatchMode=yes -q -r "$LOCAL_TGZ" \
+    if scp -i "$QBEX_KEY" -o BatchMode=yes -q -r "$LOCAL_TGZ" \
          "$QBEX_USER@$QBEX_HOST:$QBEX_REMOTE/skills/$TS/" 2>/dev/null; then
-      ssh -o BatchMode=yes -o ConnectTimeout=8 "$QBEX_USER@$QBEX_HOST" \
+      ssh -i "$QBEX_KEY" -o BatchMode=yes -o ConnectTimeout=8 "$QBEX_USER@$QBEX_HOST" \
         "ls -la '$QBEX_REMOTE/skills/$TS'" >/dev/null 2>&1 \
         && note REMOTO "OK copiado y verificado" \
         || { note REMOTO "copiado pero NO verificado"; fail=1; }

@@ -168,6 +168,12 @@ completar, decilo con la razón y qué haría falta.
   disco local, preferí también el repo git; el tar es para transporte.
 - **`git commit` con nada staged no es error**, es no-op: reportá "sin cambios desde
   último commit", no como fallo.
+- **qbex (192.168.1.69) no despierta por WOL desde S5 frío.** `~/bin/prender-server.py`
+  envía los magic packets y responde OK, pero el equipo no levanta ni por LAN ni por
+  Tailscale (esperado: 90s de poll, 0 respuestas). Es comportamiento conocido del
+  homelab, no una falla del script: reportá "qbex apagado — WOL no effective en S5
+  frío, requiere encendido manual" y seguí con los demás destinos. No reintentes en
+  bucle; dos intentos y reporte.
 - **No declares éxito de GitHub por el exit 0 del push.** Verificá contra la API:
   `gh api repos/<owner>/<repo>/git/trees/main?recursive=1` y contá los `SKILL.md`.
 
@@ -175,5 +181,7 @@ completar, decilo con la razón y qué haría falta.
 - `references/github-publish.md` — token classic vs fine-grained, verificación de
   scopes, el split `gh`/`git`, layout del repo, verificación post-push.
 - `templates/backup-skills.sh` — script completo de los 3 destinos, parametrizable
-  por env. Copialo y ajustá `QBEX_*`/`USB_MOUNT`/`GH_REPO`.
+  por env. Instalado en `~/bin/backup-skills.sh` con `GH_REPO` ya fijado a
+  `USUARIO_GITHUB/hermes-skills`. Uso: `backup-skills.sh [git usb remote]`;
+  probado y verificado (checksum USB OK, RESULT OK).
 - `scripts/gen_manifest.py` — genera `MANIFEST.json`; corrélo, no lo reescribas.
