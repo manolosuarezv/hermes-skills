@@ -13,7 +13,7 @@
 #   QBEX_USER     default user01
 #   QBEX_REMOTE   default /mnt/raid/backups/hermes/ver
 #   QBEX_KEY      default ~/.ssh/id_ed25519_qbex
-#   GH_REPO       default USUARIO_GITHUB/hermes-skills
+#   GH_REPO       default <USUARIO_GITHUB>/hermes-skills
 
 set -uo pipefail
 
@@ -25,7 +25,16 @@ QBEX_HOST="${QBEX_HOST:-192.168.1.69}"
 QBEX_USER="${QBEX_USER:-user01}"
 QBEX_REMOTE="${QBEX_REMOTE:-/mnt/raid/backups/hermes/ver}"
 QBEX_KEY="${QBEX_KEY:-$HOME/.ssh/id_ed25519_qbex}"
-GH_REPO="${GH_REPO:-USUARIO_GITHUB/hermes-skills}"
+GH_REPO="${GH_REPO:-<USUARIO_GITHUB>/hermes-skills}"
+
+# GUARD_PLACEHOLDER: este template se publica con placeholders. Si se instala sin
+# cambiar <USUARIO_GITHUB>, el push a GitHub fallaria en silencio.
+case "$GH_REPO" in
+  *"<"*)
+    echo "ERROR: GH_REPO aun contiene un placeholder: $GH_REPO" >&2
+    echo "       export GH_REPO=<usuario>/<repo>   (ver .local-values.md)" >&2
+    exit 2 ;;
+esac
 
 TS="$(date +%Y%m%d_%H%M%S)"
 STAGE="/tmp/skills-stage-$TS"

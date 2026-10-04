@@ -33,9 +33,9 @@ ls /Applications/Tailscale.app
 
 `tailscale status` prints peers with their Tailscale IPs and online state, e.g.:
 ```
-100.101.1.51   HOSTNAME_MAC  USUARIO_GITHUB@  macOS  -
-100.81.145.2   apple-tv            USUARIO_GITHUB@  tvOS   idle; offers exit node
-100.112.175.96 iphone-15           USUARIO_GITHUB@  iOS    offline, last seen 110d ago
+100.101.1.51   HOSTNAME_MAC  <USUARIO_GITHUB>@  macOS  -
+100.81.145.2   apple-tv            <USUARIO_GITHUB>@  tvOS   idle; offers exit node
+100.112.175.96 iphone-15           <USUARIO_GITHUB>@  iOS    offline, last seen 110d ago
 ```
 A line for the Mac with no `offline` suffix = connected. No `utun`/`tun` process + a peer list still printing = app installed but network extension possibly not approved yet.
 

@@ -2,8 +2,8 @@
 
 ## Context
 Cron job "Pregunta informe dominical familia Suarez" must (a) generate the weekly
-contabilidad report and (b) send a question email from `hermenegildo-hermes@DOMINIO_AGENTMAIL`
-to `USUARIO_GITHUB@gmail.com`. Report generation succeeded; the email was blocked.
+contabilidad report and (b) send a question email from `hermenegildo-hermes@<DOMINIO_AGENTMAIL>`
+to `<GMAIL_DESTINO>`. Report generation succeeded; the email was blocked.
 
 ## Environment
 - Hermes MCP `agentmail` configured in `config.yaml`:
@@ -16,9 +16,9 @@ Load the deferred tools, then call (all returned the same 403):
 1. `tool_search("send email agentmail")` → confirms `mcp__agentmail__*` tools exist.
 2. `mcp__agentmail__list_inboxes` → `Forbidden (HTTP 403) — the authenticated credential lacks permission for this action`
 3. `mcp__agentmail__create_inbox` (username=hermenegildo-hermes, domain=agentmail.to) → 403
-4. `mcp__agentmail__get_inbox(inboxId="hermenegildo-hermes@DOMINIO_AGENTMAIL")` → 403
-5. `mcp__agentmail__list_threads(inboxId="hermenegildo-hermes@DOMINIO_AGENTMAIL")` → 403
-6. `mcp__agentmail__send_message(inboxId="hermenegildo-hermes@DOMINIO_AGENTMAIL", to=["USUARIO_GITHUB@gmail.com"], subject=..., text=...)` → 403
+4. `mcp__agentmail__get_inbox(inboxId="hermenegildo-hermes@<DOMINIO_AGENTMAIL>")` → 403
+5. `mcp__agentmail__list_threads(inboxId="hermenegildo-hermes@<DOMINIO_AGENTMAIL>")` → 403
+6. `mcp__agentmail__send_message(inboxId="hermenegildo-hermes@<DOMINIO_AGENTMAIL>", to=["<GMAIL_DESTINO>"], subject=..., text=...)` → 403
 7. `mcp__agentmail__send_message` (omitted inboxId) → rejected client-side: `missing required argument(s): inboxId. The tool was NOT invoked.`
 
 Note: first `send_message` attempt returned `MCP server unreachable after 3 consecutive failures`

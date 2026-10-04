@@ -138,7 +138,7 @@ Scrubber (backup + redact + FTS rebuild): `scripts/redact_secret.py <state.db> <
   - `GET  /inboxes`                        → list org inboxes
   - `GET  /inboxes/{inboxId}/messages`     → list messages of an inbox
   - `GET  /inboxes/{inboxId}/threads`      → list threads
-  - `inboxId` may be the email address (e.g. `hermenegildo-hermes@DOMINIO_AGENTMAIL`).
+  - `inboxId` may be the email address (e.g. `hermenegildo-hermes@<DOMINIO_AGENTMAIL>`).
 - A key with `inbox_id`/`pod_id` = null has org-wide (full) permissions.
 - Quick verification without leaking the key: read `.env` in `execute_code`, call `curl`
   with the Bearer token, print only `prefix`/HTTP status — never the full key.

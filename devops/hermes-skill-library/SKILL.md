@@ -182,6 +182,6 @@ completar, decilo con la razón y qué haría falta.
   scopes, el split `gh`/`git`, layout del repo, verificación post-push.
 - `templates/backup-skills.sh` — script completo de los 3 destinos, parametrizable
   por env. Instalado en `~/bin/backup-skills.sh` con `GH_REPO` ya fijado a
-  `USUARIO_GITHUB/hermes-skills`. Uso: `backup-skills.sh [git usb remote]`;
+  `<USUARIO_GITHUB>/hermes-skills`. Uso: `backup-skills.sh [git usb remote]`;
   probado y verificado (checksum USB OK, RESULT OK).
 - `scripts/gen_manifest.py` — genera `MANIFEST.json`; corrélo, no lo reescribas.

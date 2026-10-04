@@ -12,9 +12,9 @@
   del bridge). Es ÉL quien hace GET a `http://127.0.0.1:3000/messages` y vacía la cola
   (`messageQueue.splice(0, len)`), entregando cada mensaje a la sesión del agente.
 - Entrega cada mensaje a una **sesión del gateway propia de WhatsApp**
-  (`agent:main:whatsapp:dm:NUMERO_WHATSAPP`), SEPARADA de la sesión CLI.
+  (`agent:main:whatsapp:dm:<NUMERO_WHATSAPP>`), SEPARADA de la sesión CLI.
 - El **session store** es la fuente de verdad de lo que dijo el usuario:
-  `~/.hermes/sessions/sessions.json` (JSON dict; clave `agent:main:whatsapp:dm:NUMERO_WHATSAPP`
+  `~/.hermes/sessions/sessions.json` (JSON dict; clave `agent:main:whatsapp:dm:<NUMERO_WHATSAPP>`
   → dict con `messages: [{role, content, ...}]`). Es CHICO (~3 KB), legible con python
   `json.load`, NO usar grep (revienta en timeout). Extraer mensajes `role=="user"` cuyo
   `content` empiece con `c:` para reproceso determinista SIN competir con el gateway.

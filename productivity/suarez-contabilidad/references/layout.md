@@ -30,7 +30,7 @@ Verificación (tras recálculo LibreOffice): `load_workbook(f, data_only=True)` 
 Agosto fila 6 = [TOTALES, 1695818, 169581.8, 1526236.2]; Resumen fila 12 = [Agosto 2026, 1695818, 169581.8, 1526236.2].
 
 ## Drive / respaldo
-- Drive file id (familia): `FILE_ID_FAMILIA` (reconfirmar con files().list si falla).
+- Drive file id (familia): `<FILE_ID_FAMILIA>` (reconfirmar con files().list si falla).
 - Subir: `files().update(fileId=fid, media_body=MediaFileUpload(path, resumable=True), fields='id,webViewLink,modifiedTime')`.
 - `modifiedTime` debe avanzar tras subir; si no, la subida no tomó.
 - `backup_qbex.py` hace Drive→SCP→git en /mnt/raid/backups/contabilidad_suarez/ (SOLO al final del día).

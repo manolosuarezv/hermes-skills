@@ -14,7 +14,7 @@ metadata:
 
 Use when the user asks to power on/off, check status of, or run a privileged command on a headless server in their homelab (e.g. "apaga el server01", "prende el qbex", "revisa si la máquina X está arriba", "apaga la ip 69").
 
-## Topology (user: TU_NOMBRE — homelab, LAN 192.168.1.0/24)
+## Topology (user: <TU_NOMBRE> — homelab, LAN 192.168.1.0/24)
 - **server01** = 192.168.1.69, Debian 13 (trixie), SSH user `user01`. The user sometimes calls it **"qbex"**.
 - **ThinkPad** = 192.168.1.117 (Linux, CachyOS/Hyprland).
 - **Mac Mini** = headless macOS, reachable via Tailscale `100.101.1.51` (HOSTNAME_MAC). This runs the Hermes gateway — see Pitfalls.

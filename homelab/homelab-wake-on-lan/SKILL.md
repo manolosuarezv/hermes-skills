@@ -149,7 +149,7 @@ This also applies to the DEFINITIVE verification test above (Step 1): run
 `sudo systemctl poweroff -f` on the target instead of `shutdown -h now`.
 
 ## Bash v5.1 orchestrator (the "mother" version) and its macOS port
-The repo `USUARIO_GITHUB/prender-server` (private) holds the full stack: a bash
+The repo `<USUARIO_GITHUB>/prender-server` (private) holds the full stack: a bash
 orchestrator (`prender-server`) + ESP32 firmware (`esp32_wol_relay.ino`) + MQTT
 relay (HiveMQ) + home/remote detection + Tailscale DNS + auto-SSH + retries.
 The Python `scripts/prender-server.py` in this skill is only a minimal subset

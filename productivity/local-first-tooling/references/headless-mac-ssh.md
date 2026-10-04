@@ -64,7 +64,7 @@ Send (reads body from a file; strip any leading "Asunto:" line first):
 ```bash
 open -a Mail 2>/dev/null; sleep 3
 BORRADOR="$HOME/Documents/Obsidian/Contabilidad Suarez/Borrador Resumen Correo 2026-08-14.md"
-DEST="USUARIO_GITHUB@gmail.com"
+DEST="<GMAIL_DESTINO>"
 ASUNTO="Resumen familia Suarez - contabilidad local, austeridad y seguimiento (14 ago 2026)"
 CUERPO=$(sed '1,/^Asunto:/d' "$BORRADOR" | sed '1d')
 osascript -e "with timeout of 30 seconds
@@ -88,7 +88,7 @@ first-run popup can swallow the send):
 ```bash
 osascript -e 'with timeout of 25 seconds
 tell application "Mail"
-  set destAcct to first account whose name is "USUARIO_GITHUB@gmail.com"
+  set destAcct to first account whose name is "<GMAIL_DESTINO>"
   repeat with mb in (mailboxes of destAcct)
     try
       set msgs to (messages of mb whose subject contains "Resumen familia")
@@ -128,7 +128,7 @@ Contabilidad familia Suárez: needed to email a summary draft. No mailer CLI was
 installed (no msmtp/himalaya/mutt); Mail had a Gmail account but Automation
 permission is GUI-bound. User chose Ruta B — powered on the Mac Mini monitor,
 clicked "Permitir" on the Automation prompt at the physical console, gave the
-destination `USUARIO_GITHUB@gmail.com`, and the AppleScript send delivered
+destination `<GMAIL_DESTINO>`, and the AppleScript send delivered
 (sent copy confirmed in both "Sent Mail" and "All Mail" of that account). Draft
 left in the Obsidian vault at
 `~/Documents/Obsidian/Contabilidad Suarez/Borrador Resumen Correo 2026-08-14.md`.

@@ -5,7 +5,7 @@ description: "AgentMail MCP email: send requires inbox UUID, not address."
 
 # AgentMail MCP
 
-Use when you must send or read email through the AgentMail MCP server (`mcp.agentmail.to`), e.g. from an agent inbox like `hermenegildo-hermes@DOMINIO_AGENTMAIL`. AgentMail gives each agent an inbox on the `agentmail.to` domain; you drive it via MCP tools (loaded on demand with `tool_search` → `tool_describe` → `tool_call`).
+Use when you must send or read email through the AgentMail MCP server (`mcp.agentmail.to`), e.g. from an agent inbox like `hermenegildo-hermes@<DOMINIO_AGENTMAIL>`. AgentMail gives each agent an inbox on the `agentmail.to` domain; you drive it via MCP tools (loaded on demand with `tool_search` → `tool_describe` → `tool_call`).
 
 ## Tool inventory (mcp__agentmail__*)
 - `list_inboxes` — list inboxes. Org/admin op; needs an **org-scoped** key.
@@ -54,7 +54,7 @@ read-restricted (inbox-scoped without send/read permission). The fix is NOT just
    `launchctl kickstart -k gui/$(id -u)/ai.hermes.gateway`
 4. Verify FUNCTIONALLY (macOS has no `/proc`, can't read another process's env):
    re-call `list_messages` / `list_threads`. If 403 persists, the new key is also
-   scoped wrong — get one with inbox send/read permission for `hermenegildo-hermes@DOMINIO_AGENTMAIL`.
+   scoped wrong — get one with inbox send/read permission for `hermenegildo-hermes@<DOMINIO_AGENTMAIL>`.
 5. If the key arrived via chat, immediately scrub it from history:
    `scripts/redact_secret.py ~/.hermes/state.db <KEY>` (it lands in `state.db` and the
    gateway's failure-recovery can re-emit it).

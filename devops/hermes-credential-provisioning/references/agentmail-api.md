@@ -17,7 +17,7 @@ several pages; the REST API below was verified working.
 | GET  | `/inboxes/{inboxId}/threads?limit=N` | threads |
 
 - A key with `inbox_id`/`pod_id` = null → org-wide full permissions.
-- `inboxId` accepts the full email (e.g. `hermenegildo-hermes@DOMINIO_AGENTMAIL`).
+- `inboxId` accepts the full email (e.g. `hermenegildo-hermes@<DOMINIO_AGENTMAIL>`).
 
 ## Rotation recipe (rotate AGENTMAIL_API_KEY)
 1. Read current key from `.env` (do NOT print it) — e.g. via `execute_code`:

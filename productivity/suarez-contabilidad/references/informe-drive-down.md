@@ -35,7 +35,7 @@ Así usas la lógica real de `generar_informe()` sin tocar los scripts del usuar
     sys.path.insert(0, os.path.join(BASE, "scripts"))
     import registrar as R
     FAM = os.path.join(BASE, "contabilidad familia suarez 2026.xlsx")
-    CACHED_LINK = "https://docs.google.com/spreadsheets/d/FILE_ID_UNIFICADA/edit?usp=drivesdk&ouid=TU_GOOGLE_OUID&rtpof=true&sd=true"
+    CACHED_LINK = "https://docs.google.com/spreadsheets/d/<FILE_ID_UNIFICADA>/edit?usp=drivesdk&ouid=<TU_GOOGLE_OUID>&rtpof=true&sd=true"
     R.descargar = lambda key: FAM          # archivo local, no Drive
     R.subir = lambda key: CACHED_LINK      # link cacheado, no sube
     import informe_semanal as I
@@ -45,19 +45,19 @@ Así usas la lógica real de `generar_informe()` sin tocar los scripts del usuar
 Correr con el entorno saneado del punto 1.
 
 ## 4. ⚠️ Discrepancia del link de "archivo familia"
-El link en `drive_links.txt` (`.../d/FILE_ID_UNIFICADA/...`) es el de la hoja de cálculo
+El link en `drive_links.txt` (`.../d/<FILE_ID_UNIFICADA>/...`) es el de la hoja de cálculo
 UNIFICADA `contabilidad 2026.xlsx` subida el 19-ago (según LOG_TRAZABILIDAD.md), **NO** el de
 `contabilidad familia suarez 2026.xlsx`. El file id de ESTE último (según el SKILL.md) es
-`FILE_ID_FAMILIA`.
+`<FILE_ID_FAMILIA>`.
 → Si una tarea pide "el link del archivo familia", el link cacheado puede ser el INCORRECTO.
-  Verifica contra el file id de familia (o usa `files().get(fileId=FILE_ID_FAMILIA, fields=webViewLink)`
+  Verifica contra el file id de familia (o usa `files().get(fileId=<FILE_ID_FAMILIA>, fields=webViewLink)`
   tras re-autenticar) antes de enviarlo. No asumas que `drive_links.txt` = familia.
 
 ## 5. Correo dominical "¿quieres el informe?" (pregunta, NO el informe completo)
 Asunto: `Pregunta informe dominical contabilidad`
 Cuerpo:
     Hola Manolo, hoy es domingo. ¿Quieres que te envie el informe semanal de la contabilidad de la familia Suarez? Responde SI y te lo mando al instante. Link al Drive: <link familia>
-Destinatario: USUARIO_GITHUB@gmail.com — desde: hermenegildo-hermes@DOMINIO_AGENTMAIL.
+Destinatario: <GMAIL_DESTINO> — desde: hermenegildo-hermes@<DOMINIO_AGENTMAIL>.
 NO enviar el informe completo hasta que el usuario confirme "SI".
 Si el envío falla (AgentMail MCP 403 / sin msmtp), entrega la pregunta + link vía el reporte propio del
 cron y provee el contenido listo-para-enviar; no marques el informe como "enviado".

@@ -1,7 +1,9 @@
 .usage.json
 .usage.json.lock
 .curator_*
+.curator_backups/
 .archive/
 ._*
 __pycache__/
 *.pyc
+.local-values.md

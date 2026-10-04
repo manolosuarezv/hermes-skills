@@ -10,7 +10,7 @@ tail -5 ~/.hermes/logs/gateway.log
 ## Check Tailscale (CLI not on PATH after cask install)
 ```
 /Applications/Tailscale.app/Contents/MacOS/tailscale status
-# 100.101.1.51  HOSTNAME_MAC  USUARIO_GITHUB@  macOS  -
+# 100.101.1.51  HOSTNAME_MAC  <USUARIO_GITHUB>@  macOS  -
 ```
 No utun/tun process = network extension not yet approved in System Settings.
 

@@ -1,7 +1,7 @@
 # prender-server v5.1 — arquitectura y port a macOS
 
 ## Qué es (stack "madre")
-Repo `USUARIO_GITHUB/prender-server` (privado). Contenido:
+Repo `<USUARIO_GITHUB>/prender-server` (privado). Contenido:
 - `prender-server` — orquestador bash (v5.1): detecta ubicación (home/remote),
   envía WOL (broadcast local O vía MQTT→ESP32), espera, y abre SSH auto.
 - `esp32_wol_relay.ino` — firmware ESP32: conecta a WiFi `Suarez2.4G`, se suscribe
