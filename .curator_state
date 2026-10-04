@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/Users/manuelsuarez/.hermes/logs/curator/20260929-165808",
+  "last_run_at": "2026-09-29T16:58:08.941742+00:00",
+  "last_run_duration_seconds": 1.357593,
+  "last_run_summary": "auto: 8 marked stale, 1 archived; llm: skipped (consolidation off)",
+  "last_run_summary_shown_at": "2026-09-08T15:20:23.615819+00:00",
+  "paused": false,
+  "run_count": 9
+}
