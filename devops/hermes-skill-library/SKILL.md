@@ -176,8 +176,23 @@ completar, decilo con la razón y qué haría falta.
   bucle; dos intentos y reporte.
 - **No declares éxito de GitHub por el exit 0 del push.** Verificá contra la API:
   `gh api repos/<owner>/<repo>/git/trees/main?recursive=1` y contá los `SKILL.md`.
+- **Repo público con datos personales: editar el árbol NO alcanza.** Cada commit guarda
+  el valor viejo como línea `-` del diff, así que `git log -p` sigue mostrando el
+  teléfono, el mailbox y los IDs de Drive aunque el árbol esté limpio. Hay que reescribir
+  el historial completo con `git-filter-repo` + `filter-branch` (el autor del commit no
+  lo toca `replace-text`) y forzar el push. Procedimiento completo, reglas literales y
+  checklist de datos en `references/history-purge.md`.
+- **Escaneá IDs de Drive, no solo tokens.** Un ID de archivo de Google Drive es acceso
+  directo al contenido. En skills contables había 4. Un escaneo de "API keys" no los ve.
+- **Publicar `.archive/` es un descuido con costo.** El rsync al clon de publicación
+ 创下 48 `SKILL.md` duplicados de skills archivados: infla el conteo y ensucia el repo.
+  Excluí `.archive/` del rsync y contá solo los `SKILL.md` fuera de ese prefijo.</
 
 ## Archivos de apoyo
+- `references/history-purge.md` — purga de datos sensibles de un repo ya publicado:
+  reescritura de historial, `--replace-text` es literal (no regex), `refs/original/`,
+  clon mirror, checklist de qué datos buscar. Leelo antes de editar el árbol de un repo
+  público con datos personales.
 - `references/github-publish.md` — token classic vs fine-grained, verificación de
   scopes, el split `gh`/`git`, layout del repo, verificación post-push.
 - `templates/backup-skills.sh` — script completo de los 3 destinos, parametrizable
